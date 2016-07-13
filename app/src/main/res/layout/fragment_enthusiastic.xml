@@ -6,13 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.k1.mvprxandroidsample.MainActivityFragment"
-    tools:showIn="@layout/activity_main">
+    tools:context="com.k1.mvprxandroidsample.EnthusiasticActivityFragment"
+    tools:showIn="@layout/activity_enthusiastic">
 
-    <TextView
-        android:id="@+id/main_title_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
 
 </RelativeLayout>
