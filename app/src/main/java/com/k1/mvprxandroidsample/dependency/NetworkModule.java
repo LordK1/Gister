@@ -1,4 +1,4 @@
-package com.k1.mvprxandroidsample;
+package com.k1.mvprxandroidsample.dependency;
 
 import javax.inject.Singleton;
 

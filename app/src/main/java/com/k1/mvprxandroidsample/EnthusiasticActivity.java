@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.k1.mvprxandroidsample.model.Gist;
+import com.k1.mvprxandroidsample.presenter.GistPresenter;
 import com.k1.mvprxandroidsample.service.GistService;
 import com.k1.mvprxandroidsample.service.GistViewInterface;
 

@@ -1,4 +1,4 @@
-package com.k1.mvprxandroidsample;
+package com.k1.mvprxandroidsample.dependency;
 
 import com.k1.mvprxandroidsample.service.GistService;
 

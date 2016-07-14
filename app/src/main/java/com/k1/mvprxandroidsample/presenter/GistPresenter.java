@@ -1,4 +1,4 @@
-package com.k1.mvprxandroidsample;
+package com.k1.mvprxandroidsample.presenter;
 
 import com.k1.mvprxandroidsample.model.Gist;
 import com.k1.mvprxandroidsample.service.GistViewInterface;

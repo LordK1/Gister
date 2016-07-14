@@ -2,6 +2,10 @@ package com.k1.mvprxandroidsample;
 
 import android.app.Application;
 
+import com.k1.mvprxandroidsample.dependency.ApiComponent;
+import com.k1.mvprxandroidsample.dependency.NetworkComponent;
+import com.k1.mvprxandroidsample.dependency.NetworkModule;
+
 /**
  * Created by K1 on 7/14/16.
  */

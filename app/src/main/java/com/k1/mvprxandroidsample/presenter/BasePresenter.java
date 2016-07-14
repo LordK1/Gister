@@ -1,4 +1,4 @@
-package com.k1.mvprxandroidsample;
+package com.k1.mvprxandroidsample.presenter;
 
 import rx.Observable;
 import rx.Observer;
