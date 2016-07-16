@@ -1,10 +1,10 @@
 package com.k1.mvprxandroidsample;
 
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -19,6 +19,9 @@ import com.k1.mvprxandroidsample.model.Gist;
 
 import java.io.IOException;
 
+import javax.inject.Inject;
+import javax.inject.Named;
+
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -32,11 +35,42 @@ import rx.schedulers.Schedulers;
 /**
  * To Load one single item with {@link Observable} and {@link Subscriber}
  * from API
- *
+ * <p/>
+ * In this activity I don't have use MVP and  also just used RxJava to handle some new features
+ * <p/>
+ * <p>
+ * Finally, we come to using the injection setup that we put together in the previous sections,
+ * in an activity that needs access to {@link SharedPreferences}
+ * <p/>
+ * As Expected nothing has changed in the @Inject annotation and little has changed in the injection itself.
+ * </p>
+ * <i>
+ * Lazy Injection means, will not actually get injected until the first call to get(). From then
+ * on it will remain injected regardless of how many times it gets called after that.
+ * </i>
+ * <a href="https://blog.gouline.net/dagger-2-even-sharper-less-square-b52101863542#.8y9bbm8g9">Read More</a>
  */
 public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = MainActivity.class.getSimpleName();
+
+    // injection target with named default
+    @Inject
+    @Named("default")
+    SharedPreferences mDefaultPreferences;
+
+    // Named Injection target with named secret
+    @Inject
+    @Named("secret")
+    SharedPreferences mSecretPreferences;
+
+    // Lazy injection
+/*
+    @Inject
+    Lazy<SharedPreferences> mPreferencesLazy;
+*/
+
+
     private TextView mTitleTextView;
     private Subscription mSubscription;
 
@@ -46,6 +80,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        // To inject {@link MainApplication#getApplicationComponent}
+        ((MainApplication) getApplication()).getApplicationComponent().inject(this);
+        mDefaultPreferences.edit().putString("status", "Success!!").apply();
+
+        mSecretPreferences.edit().putString("Secret", "Something At Somewhere !!!").apply();
 
         mTitleTextView = (TextView) findViewById(R.id.main_title_text_view);
 
@@ -53,8 +92,11 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                mDefaultPreferences
+                        .edit()
+                        .putString("Gist", mSubscription.toString())
+                        .apply();
+
             }
         });
         /**
@@ -84,9 +126,13 @@ public class MainActivity extends AppCompatActivity {
                     public void onNext(Gist gist) {
                         Log.d(TAG, "onNext() called with: " + "gist = [" + gist + "]");
                         Toast.makeText(MainActivity.this, gist.toString(), Toast.LENGTH_SHORT).show();
-                        mTitleTextView.setText(gist.toString());
+                        mTitleTextView.setText(gist.toString()
+                                + " mDefaultPreferences : " + mDefaultPreferences.getString("status", "Sexxxy")
+                                + " mSecretPreferences : " + mSecretPreferences.getString("Secret", "Sexxxy")
+                        );
                     }
                 });
+
 
     }
 
