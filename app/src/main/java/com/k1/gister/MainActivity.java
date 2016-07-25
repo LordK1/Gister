@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                         .putString("Gist", mSubscription.toString())
                         .apply();
 
-                startActivity(new Intent(MainActivity.this, EnthusiasticActivity.class));
+                startActivity(new Intent(MainActivity.this, ListActivity.class));
 
             }
         });

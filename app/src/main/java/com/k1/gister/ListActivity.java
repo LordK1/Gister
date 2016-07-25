@@ -40,9 +40,9 @@ import rx.Observable;
  *
  * @author K1
  */
-public class EnthusiasticActivity extends AppCompatActivity implements GistViewInterface {
+public class ListActivity extends AppCompatActivity implements GistViewInterface {
 
-    private static final String TAG = EnthusiasticActivity.class.getSimpleName();
+    private static final String TAG = ListActivity.class.getSimpleName();
     @Inject
     GistService mGistService;
 
@@ -65,7 +65,7 @@ public class EnthusiasticActivity extends AppCompatActivity implements GistViewI
         setContentView(R.layout.activity_enthusiastic);
 
         ButterKnife.setDebug(true);
-        final Unbinder bind = ButterKnife.bind(EnthusiasticActivity.this);
+        final Unbinder bind = ButterKnife.bind(ListActivity.this);
         Log.i(TAG, "onCreate: mRecyclerView : "+mRecyclerView);
         setSupportActionBar(mToolbar);
 
@@ -91,7 +91,7 @@ public class EnthusiasticActivity extends AppCompatActivity implements GistViewI
     private void resolveDependency() {
         ((MainApplication) getApplication())
                 .getApiComponent()
-                .inject(EnthusiasticActivity.this);
+                .inject(ListActivity.this);
     }
 
     /**
@@ -111,7 +111,7 @@ public class EnthusiasticActivity extends AppCompatActivity implements GistViewI
         super.onResume();
         mPresenter.onResume();
         mPresenter.fetchGists();
-        mProgressDialog = new ProgressDialog(EnthusiasticActivity.this);
+        mProgressDialog = new ProgressDialog(ListActivity.this);
         mProgressDialog.setIndeterminate(true);
         mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         mProgressDialog.setTitle("Downloading ...");
@@ -128,7 +128,7 @@ public class EnthusiasticActivity extends AppCompatActivity implements GistViewI
     @Override
     public void onError(String message) {
         mProgressDialog.dismiss();
-        Toast.makeText(EnthusiasticActivity.this, "Error : " + message, Toast.LENGTH_SHORT).show();
+        Toast.makeText(ListActivity.this, "Error : " + message, Toast.LENGTH_SHORT).show();
     }
 
     @Override

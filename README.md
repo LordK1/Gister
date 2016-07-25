@@ -1,4 +1,4 @@
-# MVP Architecture with RxJava and some more 
+# Gister : MVP Architecture with RxJava and some more 
 
 #####To simple Implementation of some new features in Android Development via Github.com API's , as listed below
 [pookie](#pookie)
@@ -41,6 +41,7 @@ Dagger 2 exposes a number of special annotations:
  - [Esspersso]()
  - [GSON]()
  - [ButterKnife]()
+ - [Glide] ()
  
    
 ### Installation

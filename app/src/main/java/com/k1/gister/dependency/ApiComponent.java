@@ -1,6 +1,6 @@
 package com.k1.gister.dependency;
 
-import com.k1.gister.EnthusiasticActivity;
+import com.k1.gister.ListActivity;
 
 import dagger.Component;
 
@@ -11,5 +11,5 @@ import dagger.Component;
 @Component(modules = ApiModule.class, dependencies = NetworkComponent.class)
 public interface ApiComponent {
 
-    void inject(EnthusiasticActivity activity);
+    void inject(ListActivity activity);
 }

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MVPRxAndroidSample.iml" filepath="$PROJECT_DIR$/MVPRxAndroidSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Gister.iml" filepath="$PROJECT_DIR$/Gister.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
