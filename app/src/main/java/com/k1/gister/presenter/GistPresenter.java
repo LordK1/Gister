@@ -1,14 +1,14 @@
-package com.k1.mvprxandroidsample.presenter;
+package com.k1.gister.presenter;
 
-import com.k1.mvprxandroidsample.model.Gist;
-import com.k1.mvprxandroidsample.service.GistViewInterface;
+import com.k1.gister.service.GistViewInterface;
+import com.k1.gister.model.Gist;
 
 import java.util.List;
 
 import rx.Observer;
 
 /**
- * To present {@link com.k1.mvprxandroidsample.model.Gist} as extends {@link BasePresenter}
+ * To present {@link Gist} as extends {@link BasePresenter}
  * Created by K1 on 7/14/16.
  */
 public class GistPresenter extends BasePresenter implements Observer<List<Gist>> {

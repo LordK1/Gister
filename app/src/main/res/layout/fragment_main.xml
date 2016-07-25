@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.k1.mvprxandroidsample.MainActivityFragment"
+    tools:context="com.k1.gister.MainActivityFragment"
     tools:showIn="@layout/activity_main">
 
     <TextView

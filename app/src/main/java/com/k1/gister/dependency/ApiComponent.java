@@ -1,6 +1,6 @@
-package com.k1.mvprxandroidsample.dependency;
+package com.k1.gister.dependency;
 
-import com.k1.mvprxandroidsample.EnthusiasticActivity;
+import com.k1.gister.EnthusiasticActivity;
 
 import dagger.Component;
 

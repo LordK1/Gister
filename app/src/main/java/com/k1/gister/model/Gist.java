@@ -1,4 +1,4 @@
-package com.k1.mvprxandroidsample.model;
+package com.k1.gister.model;
 
 import com.google.gson.annotations.SerializedName;
 

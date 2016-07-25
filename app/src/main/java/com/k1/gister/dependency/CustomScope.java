@@ -1,4 +1,4 @@
-package com.k1.mvprxandroidsample.dependency;
+package com.k1.gister.dependency;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

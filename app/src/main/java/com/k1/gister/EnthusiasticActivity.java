@@ -1,4 +1,4 @@
-package com.k1.mvprxandroidsample;
+package com.k1.gister;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -17,10 +17,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.k1.mvprxandroidsample.model.Gist;
-import com.k1.mvprxandroidsample.presenter.GistPresenter;
-import com.k1.mvprxandroidsample.service.GistService;
-import com.k1.mvprxandroidsample.service.GistViewInterface;
+import com.k1.gister.model.Gist;
+import com.k1.gister.presenter.GistPresenter;
+import com.k1.gister.service.GistService;
+import com.k1.gister.service.GistViewInterface;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,9 +33,9 @@ import butterknife.Unbinder;
 import rx.Observable;
 
 /**
- * To load some {@link com.k1.mvprxandroidsample.model.Gist} as list items
+ * To load some {@link Gist} as list items
  * in {@link android.support.v7.widget.RecyclerView}
- * as implemented {@link com.k1.mvprxandroidsample.service.GistViewInterface}
+ * as implemented {@link GistViewInterface}
  * you can call it the View layer in MVP architecture
  *
  * @author K1

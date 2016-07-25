@@ -1,5 +1,6 @@
-package com.k1.mvprxandroidsample;
+package com.k1.gister;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -15,7 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
-import com.k1.mvprxandroidsample.model.Gist;
+import com.k1.gister.model.Gist;
 
 import java.io.IOException;
 
@@ -96,6 +97,8 @@ public class MainActivity extends AppCompatActivity {
                         .edit()
                         .putString("Gist", mSubscription.toString())
                         .apply();
+
+                startActivity(new Intent(MainActivity.this, EnthusiasticActivity.class));
 
             }
         });

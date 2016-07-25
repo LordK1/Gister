@@ -1,4 +1,4 @@
-package com.k1.mvprxandroidsample;
+package com.k1.gister;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

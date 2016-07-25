@@ -1,6 +1,8 @@
-package com.k1.mvprxandroidsample;
+package com.k1.gister.dependency;
 
-import com.k1.mvprxandroidsample.dependency.CustomScope;
+import com.k1.gister.MainActivity;
+import com.k1.gister.MainActivityFragment;
+import com.k1.gister.MainApplication;
 
 import dagger.Component;
 

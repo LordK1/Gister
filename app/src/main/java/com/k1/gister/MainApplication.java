@@ -1,12 +1,15 @@
-package com.k1.mvprxandroidsample;
+package com.k1.gister;
 
 import android.app.Application;
 
-import com.k1.mvprxandroidsample.dependency.ApiComponent;
-import com.k1.mvprxandroidsample.dependency.DaggerApiComponent;
-import com.k1.mvprxandroidsample.dependency.DaggerNetworkComponent;
-import com.k1.mvprxandroidsample.dependency.NetworkComponent;
-import com.k1.mvprxandroidsample.dependency.NetworkModule;
+import com.k1.gister.dependency.ApiComponent;
+import com.k1.gister.dependency.ApplicationComponent;
+import com.k1.gister.dependency.ApplicationModule;
+import com.k1.gister.dependency.DaggerApiComponent;
+import com.k1.gister.dependency.DaggerApplicationComponent;
+import com.k1.gister.dependency.DaggerNetworkComponent;
+import com.k1.gister.dependency.NetworkComponent;
+import com.k1.gister.dependency.NetworkModule;
 
 
 /**

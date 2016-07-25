@@ -1,6 +1,6 @@
-package com.k1.mvprxandroidsample.service;
+package com.k1.gister.service;
 
-import com.k1.mvprxandroidsample.model.Gist;
+import com.k1.gister.model.Gist;
 
 import java.util.List;
 

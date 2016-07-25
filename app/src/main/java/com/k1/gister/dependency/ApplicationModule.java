@@ -1,8 +1,10 @@
-package com.k1.mvprxandroidsample;
+package com.k1.gister.dependency;
 
 import android.app.Application;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+
+import com.k1.gister.MainApplication;
 
 import javax.inject.Named;
 

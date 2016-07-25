@@ -1,4 +1,4 @@
-package com.k1.mvprxandroidsample.presenter;
+package com.k1.gister.presenter;
 
 /**
  * Created by K1 on 7/14/16.

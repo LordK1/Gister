@@ -1,4 +1,4 @@
-package com.k1.mvprxandroidsample.presenter;
+package com.k1.gister.presenter;
 
 import rx.Observable;
 import rx.Observer;

@@ -1,6 +1,6 @@
-package com.k1.mvprxandroidsample.dependency;
+package com.k1.gister.dependency;
 
-import com.k1.mvprxandroidsample.service.GistService;
+import com.k1.gister.service.GistService;
 
 import dagger.Module;
 import dagger.Provides;
