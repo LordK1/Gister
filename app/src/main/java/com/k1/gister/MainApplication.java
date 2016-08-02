@@ -1,6 +1,8 @@
 package com.k1.gister;
 
 import android.app.Application;
+import android.content.Context;
+import android.support.multidex.MultiDex;
 
 import com.k1.gister.dependency.ApiComponent;
 import com.k1.gister.dependency.ApplicationComponent;
@@ -42,11 +44,16 @@ public class MainApplication extends Application {
     public void onCreate() {
         super.onCreate();
         resolveDependency();
-
         mApplicationComponent = DaggerApplicationComponent.builder().applicationModule(new ApplicationModule(this)).build();
         mApplicationComponent.inject(this);
     }
 
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(base);
+    }
 
     /**
      * To resolve dependency
